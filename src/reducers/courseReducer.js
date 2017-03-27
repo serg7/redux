@@ -1,3 +1,11 @@
-/**
- * Created by Sergey on 27.03.2017.
- */
+export default function courseReducer(state = [], action) {
+    switch(action.type) {
+        case 'CREATE_COURSE':
+            return [...state,
+                Object.assign({}, action.course)
+            ];  //state.push(action.course);
+
+        default:
+            return state;
+    }
+}
