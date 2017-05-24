@@ -55,14 +55,28 @@ ManageCoursePage.contextTypes = {
     router: PropTypes.object.isRequired
 };
 
+function getCourseById(courses, id) {
+    const course = courses.filter(course => course.id == id);
+    if (course) {
+        return course[0];
+    }
+
+    return null;
+}
+
 function mapStateToProps(state, ownProps) {
+    const courseId = ownProps.params.id;
     let course = { id: '', watchHref: '', title: '', authorId: '', length: '', category: ''};
+
+    if (courseId && state.courses.length > 0) {
+        course = getCourseById(state.courses, courseId);
+    }
 
     const authorsFormattedForDropdown = state.authors.map(author => {
        return {
            value: author.id,
            text: author.firstName + ' ' + author.lastName
-       } ;
+       };
     });
 
     return {
