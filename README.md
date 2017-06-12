@@ -1,1 +1,0 @@
-Simple application created with React and Redux

@@ -1,14 +1,14 @@
 {
   "name": "ps-redux",
   "version": "1.0.0",
-  "description": "Simple react with redux app",
+  "description": "Starter kit for React and Redux Pluralsight course by Cory House",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
     "start": "npm-run-all --parallel test:watch open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
+    "test": "mocha --reporter progress tools/testSetup.js src/**/*.test.js src/components/**/*.test.js",
     "test:watch": "npm run test -- --watch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
@@ -17,14 +17,12 @@
     "build": "babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js"
   },
-  "author": "Sergey Borsuk",
+  "author": "Cory House",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
-    "compression": "^1.6.2",
     "jquery": "2.2.3",
-    "npm-run-all": "^1.8.0",
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
@@ -43,7 +41,6 @@
     "babel-preset-react": "6.5.0",
     "babel-preset-react-hmre": "1.1.1",
     "babel-register": "6.8.0",
-    "cheerio": "^0.20.0",
     "colors": "1.1.2",
     "compression": "^1.6.1",
     "cross-env": "1.0.7",
@@ -75,6 +72,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/serg7/redux"
+    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
   }
 }
