@@ -1,5 +1,5 @@
 {
-  "name": "ps-redux",
+  "name": "redux admin",
   "version": "1.0.0",
   "description": "Starter kit for React and Redux Pluralsight course by Cory House",
   "scripts": {
@@ -17,7 +17,7 @@
     "build": "babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js"
   },
-  "author": "Cory House",
+  "author": "Sergey Borsuk",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "6.8.0",
@@ -72,6 +72,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coryhouse/pluralsight-redux-starter"
+    "url": "https://github.com/serg7/redux"
   }
 }
